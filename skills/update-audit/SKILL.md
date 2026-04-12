@@ -1,6 +1,6 @@
 ---
 name: update-audit
-description: Check operating system, apps, drivers, runtimes, package managers, and core tools for outdated versions, weak choices, or obvious upgrade opportunities.
+description: Check operating system, apps, drivers, runtimes, package managers, and core tools for outdated versions, weak choices, or obvious upgrade opportunities after asking the user to choose Audit mode or YOLO mode.
 ---
 
 # Update Audit
@@ -10,6 +10,9 @@ Use this when the user wants a focused pass on updates, outdated tools, and whet
 ## First Step: Pick A Mode
 
 At the start of the interaction, ask the user to choose one mode:
+
+Ask exactly:
+`Choose a mode: Audit mode (recommended) or YOLO mode.`
 
 - `Audit mode` (recommended): inspect first, report findings, ask before changing anything
 - `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice

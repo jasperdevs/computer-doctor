@@ -24,7 +24,7 @@ Install skills from https://github.com/jasperdevs/computer-doctor using the `ski
 ## Install
 
 ```bash
-npx skills add https://github.com/jasperdevs/computer-doctor --all
+npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
 ## Slash Commands
@@ -36,6 +36,9 @@ npx skills add https://github.com/jasperdevs/computer-doctor --all
 | `$devtools-audit` | Reviews shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts. |
 | `$update-audit` | Reviews updates, outdated tools, drivers, runtimes, package managers, and upgrade opportunities. |
 
+Use `$computer-doctor` for a broad pass.
+Use the focused commands when you already know which area you want to inspect.
+
 ## Install Individual Skills
 
 ```bash
@@ -43,6 +46,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 npx skills add https://github.com/jasperdevs/computer-doctor --skill security-scan
 npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audit
+npx skills add https://github.com/jasperdevs/computer-doctor --all
 ```
 
 ## Modes

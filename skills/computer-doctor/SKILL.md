@@ -1,6 +1,6 @@
 ---
 name: computer-doctor
-description: Audit a computer as a working environment across security, performance, startup behavior, installed software, storage, and developer tooling without making destructive changes by default.
+description: Audit a computer as a working environment across security, performance, startup behavior, installed software, storage, updates, and developer tools after asking the user to choose Audit mode or YOLO mode.
 ---
 
 # Computer Doctor
@@ -10,6 +10,9 @@ Use this when the user wants a broad machine audit.
 ## First Step: Pick A Mode
 
 At the start of the interaction, ask the user to choose one mode:
+
+Ask exactly:
+`Choose a mode: Audit mode (recommended) or YOLO mode.`
 
 - `Audit mode` (recommended): inspect first, report findings, ask before changing anything
 - `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice

@@ -1,6 +1,6 @@
 ---
 name: security-scan
-description: Check antivirus coverage, suspicious processes, startup persistence, autoruns, risky permissions, and obvious malware signals without pretending to be a full forensic scan.
+description: Check antivirus coverage, suspicious processes, startup persistence, autoruns, risky permissions, and obvious malware signals after asking the user to choose Audit mode or YOLO mode.
 ---
 
 # Security Scan
@@ -10,6 +10,9 @@ Use this when the user wants a security-first pass instead of a full machine rev
 ## First Step: Pick A Mode
 
 At the start of the interaction, ask the user to choose one mode:
+
+Ask exactly:
+`Choose a mode: Audit mode (recommended) or YOLO mode.`
 
 - `Audit mode` (recommended): inspect first, report findings, ask before changing anything
 - `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice

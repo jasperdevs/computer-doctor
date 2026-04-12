@@ -3,6 +3,7 @@
 - operating system update status
 - security update gaps
 - application update status
+- Homebrew, winget, apt, npm, pip, cargo, uv, or other package-manager state where applicable
 - runtimes and SDKs
 - package managers and their health
 - drivers where visible

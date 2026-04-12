@@ -1,4 +1,4 @@
 interface:
   display_name: "Security Scan"
   short_description: "Check malware signals, suspicious persistence, protection coverage, and obvious security issues"
-  default_prompt: "Use $security-scan to inspect antivirus coverage, suspicious processes, persistence, and obvious malware signals without pretending to provide a full forensic scan."
+  default_prompt: "Use $security-scan to ask for Audit mode or YOLO mode first, then inspect antivirus coverage, suspicious processes, persistence, and obvious malware signals."

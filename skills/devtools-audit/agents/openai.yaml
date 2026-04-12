@@ -1,4 +1,4 @@
 interface:
   display_name: "Devtools Audit"
   short_description: "Review shells, PATH, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts"
-  default_prompt: "Use $devtools-audit to inspect shells, PATH, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts on this machine."
+  default_prompt: "Use $devtools-audit to ask for Audit mode or YOLO mode first, then inspect shells, PATH, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts."

@@ -1,6 +1,6 @@
 ---
 name: devtools-audit
-description: Review shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tooling conflicts on a machine.
+description: Review shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts after asking the user to choose Audit mode or YOLO mode.
 ---
 
 # Devtools Audit
@@ -10,6 +10,9 @@ Use this when the user wants a developer-tooling audit instead of a full machine
 ## First Step: Pick A Mode
 
 At the start of the interaction, ask the user to choose one mode:
+
+Ask exactly:
+`Choose a mode: Audit mode (recommended) or YOLO mode.`
 
 - `Audit mode` (recommended): inspect first, report findings, ask before changing anything
 - `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice
