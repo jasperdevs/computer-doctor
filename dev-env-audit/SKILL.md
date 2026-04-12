@@ -1,9 +1,9 @@
 ---
-name: dev-env-check
+name: dev-env-audit
 description: Review shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer setup conflicts on a machine.
 ---
 
-# Dev Env Check
+# Dev Env Audit
 
 Use this when the user wants a developer-focused audit instead of a full machine review.
 

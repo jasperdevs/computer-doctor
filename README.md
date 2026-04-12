@@ -12,11 +12,10 @@
 
 </div>
 
-## Install
+## Discover
 
 ```bash
 npx skills add https://github.com/jasperdevs/computer-doctor --list
-npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
 ## Slash Commands
@@ -25,7 +24,16 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 $computer-doctor
 $virus-scan
 $startup-audit
-$dev-env-check
+$dev-env-audit
+```
+
+## Install
+
+```bash
+npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
+npx skills add https://github.com/jasperdevs/computer-doctor --skill virus-scan
+npx skills add https://github.com/jasperdevs/computer-doctor --skill startup-audit
+npx skills add https://github.com/jasperdevs/computer-doctor --skill dev-env-audit
 ```
 
 ## Why Use It
@@ -48,5 +56,5 @@ Use these when you want one pass over the machine instead of checking settings, 
 ## Installation Prompt
 
 ```text
-Install one or more skills from https://github.com/jasperdevs/computer-doctor using the `skills` CLI. First run `npx skills add https://github.com/jasperdevs/computer-doctor --list`, then install the ones you want.
+Install one or more skills from https://github.com/jasperdevs/computer-doctor using the `skills` CLI. First run `npx skills add https://github.com/jasperdevs/computer-doctor --list`, then install the commands you want, such as `computer-doctor`, `virus-scan`, `startup-audit`, or `dev-env-audit`.
 ```
