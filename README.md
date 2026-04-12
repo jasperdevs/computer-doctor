@@ -2,9 +2,7 @@
 
 # 🩺 computer-doctor
 
-**Minimal single-skill repo for `skills.sh` and Codex**
-
-Full-system computer auditing for Codex and compatible agent-skill runtimes.
+A skill for full-system computer audits.
 
 </div>
 
@@ -27,5 +25,11 @@ The skill audits a machine as a working environment, including:
 ## Installation Prompt
 
 ```text
-Install the `computer-doctor` skill from https://github.com/jasperdevs/computer-doctor using the skills CLI.
+Install the `computer-doctor` skill from https://github.com/jasperdevs/computer-doctor using the `skills` CLI with `npx skills add https://github.com/jasperdevs/computer-doctor`.
 ```
+
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=social)](https://github.com/jasperdevs/computer-doctor/stargazers)
+
+</div>
