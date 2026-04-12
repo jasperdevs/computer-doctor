@@ -49,13 +49,14 @@ If the user already picked a mode earlier in the same task, do not ask again.
 Report:
 
 1. protection status
-2. suspicious findings
-3. confidence level
-4. recommended next steps
-5. whether deeper scanning is needed
-6. approval-required changes in Audit mode
+2. highest-risk findings
+3. whether deeper scanning is needed
+4. approval-required changes in Audit mode
 
 ## Read Next
 
 - `references/checklist.md`
 - `references/report.md`
+- `references/windows.md`
+- `references/macos.md`
+- `references/linux.md`

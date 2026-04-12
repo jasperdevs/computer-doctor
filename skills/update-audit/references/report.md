@@ -7,3 +7,10 @@ Use this shape:
 3. replacements or better choices
 4. recommended next steps
 5. approval-required changes in Audit mode
+
+For each concrete item, include:
+
+- what is outdated or weak
+- evidence
+- impact
+- recommended next step

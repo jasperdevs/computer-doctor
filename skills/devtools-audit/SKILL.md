@@ -49,14 +49,17 @@ If the user already picked a mode earlier in the same task, do not ask again.
 
 Report:
 
-1. Broken or conflicting setup
-2. Missing essentials
-3. Cleanup opportunities
-4. Practical improvements
-5. Suggested standardization
+1. broken or conflicting setup
+2. missing essentials
+3. cleanup opportunities
+4. practical improvements
+5. suggested standardization
 6. approval-required changes in Audit mode
 
 ## Read Next
 
 - `references/checklist.md`
 - `references/report.md`
+- `references/windows.md`
+- `references/macos.md`
+- `references/linux.md`

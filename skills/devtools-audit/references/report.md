@@ -8,3 +8,10 @@ Use this shape:
 4. practical improvements
 5. suggested standardization
 6. approval-required changes in Audit mode
+
+For each concrete issue, include:
+
+- what was found
+- evidence
+- impact
+- recommended next step

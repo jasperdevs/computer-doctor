@@ -59,3 +59,6 @@ Report:
 
 - `references/checklist.md`
 - `references/report.md`
+- `references/windows.md`
+- `references/macos.md`
+- `references/linux.md`

@@ -63,6 +63,14 @@ npx skills add https://github.com/jasperdevs/computer-doctor --all
 
 Use these when you want a clean machine audit without digging through settings, startup apps, storage, and tool setup by hand.
 
+## Validation
+
+```bash
+node scripts/verify-pack.mjs
+```
+
+See `evals/README.md` and `evals/sample-outputs.md` for the quality bar and output examples.
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jasperdevs/computer-doctor&type=Date)](https://star-history.com/#jasperdevs/computer-doctor&Date)

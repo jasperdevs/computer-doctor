@@ -51,7 +51,11 @@ This is the top-level command for checking the computer as a whole working envir
 1. Detect environment and limits.
 2. Inspect the machine broadly using `references/audit-checklist.md`.
 3. Apply `references/safety-boundaries.md`.
-4. Report findings using `references/report-template.md`.
+4. Read the relevant platform notes:
+   - Windows: `references/windows.md`
+   - macOS: `references/macos.md`
+   - Linux: `references/linux.md`
+5. Report findings using `references/report-template.md`.
 
 ## Output
 
@@ -79,3 +83,6 @@ Use the narrower commands when the user wants a focused pass:
 - `references/audit-checklist.md`
 - `references/safety-boundaries.md`
 - `references/report-template.md`
+- `references/windows.md`
+- `references/macos.md`
+- `references/linux.md`
