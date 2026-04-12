@@ -1,0 +1,76 @@
+name: verify-pack
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify discovery output matches manifest
+        run: |
+          OUTPUT="$(npx skills add . --list --full-depth)"
+          echo "$OUTPUT"
+          OUTPUT="$OUTPUT" node -e '
+            const fs = require("fs");
+            const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
+            const names = [
+              ...manifest.canonical_skills.map((skill) => skill.name),
+              ...(manifest.aliases ?? []).map((skill) => skill.name),
+            ];
+            const output = process.env.OUTPUT ?? "";
+            const missing = names.filter((name) => !output.includes(name));
+            if (missing.length) {
+              console.error("Missing skills in discovery output:", missing.join(", "));
+              process.exit(1);
+            }
+          '
+
+      - name: Verify isolated --all install
+        env:
+          PACK_SOURCE: ${{ github.workspace }}
+        run: |
+          TMP_DIR="$(mktemp -d)"
+          pushd "$TMP_DIR" >/dev/null
+          npx skills add "$PACK_SOURCE" -y --all --copy
+          popd >/dev/null
+          TMP_DIR="$TMP_DIR" node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
+            const expected = [
+              ...manifest.canonical_skills.map((skill) => skill.name),
+              ...(manifest.aliases ?? []).map((skill) => skill.name),
+            ].sort();
+            const installedDir = path.join(process.env.TMP_DIR, ".agents", "skills");
+            const installed = fs.readdirSync(installedDir, { withFileTypes: true })
+              .filter((entry) => entry.isDirectory())
+              .map((entry) => entry.name)
+              .sort();
+            if (JSON.stringify(installed) !== JSON.stringify(expected)) {
+              console.error("Installed skills did not match manifest.");
+              console.error("Expected:", expected.join(", "));
+              console.error("Actual:", installed.join(", "));
+              process.exit(1);
+            }
+          '
+
+      - name: Verify deprecated alias install path still works
+        env:
+          PACK_SOURCE: ${{ github.workspace }}
+        run: |
+          TMP_DIR="$(mktemp -d)"
+          pushd "$TMP_DIR" >/dev/null
+          npx skills add "$PACK_SOURCE" -y --agent codex --skill virus-scan --copy
+          popd >/dev/null
+          test -f "$TMP_DIR/.agents/skills/virus-scan/SKILL.md"

@@ -18,6 +18,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 npx skills add https://github.com/jasperdevs/computer-doctor --skill security-scan
 npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audit
+npx skills add https://github.com/jasperdevs/computer-doctor --skill virus-scan
 ```
 
 </details>
@@ -30,6 +31,9 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audi
 | `$security-scan` | Endpoint protection, firewall status, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. | [open](https://skills.sh/jasperdevs/computer-doctor/security-scan) |
 | `$devtools-audit` | PATH problems, shell setup, runtimes, SDKs, package managers, Git tooling, and dead or conflicting installs. | [open](https://skills.sh/jasperdevs/computer-doctor/devtools-audit) |
 | `$update-audit` | OS updates, outdated apps, drivers where visible, runtimes, package managers, and better replacement choices. | [open](https://skills.sh/jasperdevs/computer-doctor/update-audit) |
+| `$virus-scan` | Deprecated compatibility alias for `$security-scan`. Keep using it only if you still rely on the old command name. | [open](https://skills.sh/jasperdevs/computer-doctor/virus-scan) |
+
+The canonical pack surface is tracked in [skills-pack.json](./skills-pack.json).
 
 > [!NOTE]
 > Each skill begins with `Choose a mode: Audit mode (recommended) or YOLO mode.` Audit mode inspects first and asks before making changes. YOLO mode keeps moving after that initial choice, but still follows the skill's safety boundaries.
