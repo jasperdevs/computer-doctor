@@ -6,7 +6,7 @@
 
 *Skills for auditing computer health, security, updates, and developer tools.*
 
-[![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
+[![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/commits/main)
