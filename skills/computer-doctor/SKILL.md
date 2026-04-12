@@ -37,7 +37,7 @@ Use the narrower commands when the user wants a focused pass:
 
 - `$security-scan`
 - `$startup-audit`
-- `$dev-env-audit`
+- `$devtools-audit`
 
 ## Read Next
 

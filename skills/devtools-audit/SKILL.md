@@ -1,11 +1,11 @@
 ---
-name: dev-env-audit
-description: Review shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer setup conflicts on a machine.
+name: devtools-audit
+description: Review shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tooling conflicts on a machine.
 ---
 
-# Dev Env Audit
+# Devtools Audit
 
-Use this when the user wants a developer-focused audit instead of a full machine review.
+Use this when the user wants a developer-tooling audit instead of a full machine review.
 
 ## When To Use
 
@@ -39,6 +39,7 @@ Report:
 2. Missing essentials
 3. Cleanup opportunities
 4. Practical improvements
+5. Suggested standardization
 
 ## Read Next
 

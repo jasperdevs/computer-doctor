@@ -1,6 +1,6 @@
 ---
 name: startup-audit
-description: Review startup items, login items, services, scheduled tasks, launch agents, daemons, and persistent background processes to find waste, clutter, or suspicious behavior.
+description: Review startup items, login items, services, scheduled tasks, launch agents, daemons, and persistent background processes to find clutter, slowdown, or suspicious behavior.
 ---
 
 # Startup Audit
@@ -36,6 +36,7 @@ Report:
 2. Persistent background items worth attention
 3. Suspicious persistence if any
 4. Recommended cleanup or follow-up
+5. Approval-required changes
 
 ## Read Next
 

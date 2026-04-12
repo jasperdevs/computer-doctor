@@ -1,6 +1,6 @@
 ---
 name: security-scan
-description: Check antivirus coverage, suspicious processes, startup persistence, autoruns, risky permissions, and obvious malware signals without pretending to provide a full forensic scan.
+description: Check antivirus coverage, suspicious processes, startup persistence, autoruns, risky permissions, and obvious malware signals without pretending to be a full forensic scan.
 ---
 
 # Security Scan
@@ -39,6 +39,7 @@ Report:
 2. suspicious findings
 3. confidence level
 4. recommended next steps
+5. whether deeper scanning is needed
 
 ## Read Next
 

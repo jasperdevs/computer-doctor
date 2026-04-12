@@ -6,3 +6,4 @@ Use this shape:
 2. missing essentials
 3. cleanup opportunities
 4. practical improvements
+5. suggested standardization

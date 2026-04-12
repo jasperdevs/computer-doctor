@@ -6,3 +6,4 @@ Use this shape:
 2. suspicious findings
 3. confidence level
 4. recommended next steps
+5. whether deeper scanning is needed
