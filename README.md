@@ -32,7 +32,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 | Command | What it does |
 | --- | --- |
 | `$computer-doctor` | Runs a broad audit across security, startup behavior, performance, storage, software, updates, and developer tooling. |
-| `$security-scan` | Checks antivirus coverage, suspicious processes, persistence, autoruns, and obvious malware signals. |
+| `$security-scan` | Checks antivirus coverage, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. |
 | `$devtools-audit` | Reviews shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts. |
 | `$update-audit` | Reviews updates, outdated tools, drivers, runtimes, package managers, and upgrade opportunities. |
 

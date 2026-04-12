@@ -1,4 +1,4 @@
 interface:
   display_name: "Update Audit"
-  short_description: "Review updates, outdated tools, drivers, runtimes, and upgrade opportunities"
-  default_prompt: "Use $update-audit to ask for Audit mode or YOLO mode first, then inspect operating system, apps, runtimes, package managers, drivers, and obvious upgrade opportunities."
+  short_description: "Review operating-system, app, driver, runtime, package-manager, and core-tool updates"
+  default_prompt: "Use $update-audit to ask for Audit mode or YOLO mode first, then inspect operating system, apps, drivers, runtimes, package managers, and core tools for outdated versions or upgrade opportunities."

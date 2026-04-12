@@ -10,3 +10,11 @@ Use this structure:
 6. Software and developer environment findings
 7. Prioritized action plan
 8. Limitations
+
+For each finding, include:
+
+- what was found
+- why it matters
+- evidence
+- confidence
+- recommended next step
