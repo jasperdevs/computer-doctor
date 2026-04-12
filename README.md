@@ -4,7 +4,7 @@
 
 <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
-Audit your computer like a real working environment: security, performance, startup behavior, software quality, and developer tooling.
+*Audit your computer like a real working environment: security, performance, startup behavior, software quality, and developer tooling.*
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
