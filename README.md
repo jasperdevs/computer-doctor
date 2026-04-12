@@ -34,17 +34,24 @@ It helps Codex inspect:
 
 ```text
 computer-doctor/
+├── AGENTS.md
+├── CHANGELOG.md
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
 ├── examples/
+│   ├── full-audit-request.md
 │   └── full-system-audit.md
 ├── references/
 │   ├── audit-checklist.md
+│   ├── linux-audit.md
+│   ├── macos-audit.md
 │   ├── report-template.md
-│   └── safety-boundaries.md
+│   ├── safety-boundaries.md
+│   └── windows-audit.md
 ├── LICENSE
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ## Installation
@@ -89,6 +96,8 @@ This repo is structured like a reusable skill package, not just a lone prompt fi
 - `references/` holds detailed guidance without bloating the main skill body
 - `examples/` shows how to invoke the skill cleanly
 - `agents/openai.yaml` makes the skill present better in skill UIs
+- `AGENTS.md` keeps future repo edits aligned with the intended structure
+- `CHANGELOG.md` gives the public repo a simple release trail
 
 ## Status
 

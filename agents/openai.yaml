@@ -1,0 +1,4 @@
+interface:
+  display_name: "Computer Doctor"
+  short_description: "Audit a computer for setup, security, performance, and tooling issues"
+  default_prompt: "Use $computer-doctor to perform a read-first full-system audit of this computer and report high-impact findings, risks, and recommendations without making destructive changes by default."
