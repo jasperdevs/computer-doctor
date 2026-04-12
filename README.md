@@ -8,8 +8,6 @@ Full-system computer auditing for Codex and compatible agent-skill runtimes.
 
 </div>
 
-This repo is now a single skill at the repository root.
-
 ## Install
 
 ```bash
@@ -40,12 +38,6 @@ The skill audits a machine as a working environment, including:
 - startup behavior and persistence
 - installed software quality
 - developer tooling and environment health
-
-## Notes
-
-- It defaults to read-only auditing.
-- It should not delete, uninstall, disable, or clean anything without explicit approval.
-- The `LICENSE` file is not a duplicate of GitHub metadata. GitHub shows license info because it detects that file.
 
 ## Manual Install
 
