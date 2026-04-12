@@ -56,12 +56,12 @@ npx skills add https://github.com/jasperdevs/computer-doctor --all
 | `Audit mode` | Inspects first, reports findings, and asks before making changes. Recommended. |
 | `YOLO mode` | Still tries to be safe, but acts without asking again after the initial mode choice. |
 
+> [!NOTE]
+> (short) These skills start by asking whether you want `Audit mode` or `YOLO mode`. Audit mode is recommended. YOLO mode still tries to be safe, but acts without asking again. It is still just a prompt, though, so if the AI goes rogue, even if that is unlikely, you are still taking a chance.
+
 ## Why Use It
 
 Use these when you want a clean machine audit without digging through settings, startup apps, storage, and tool setup by hand.
-
-> [!NOTE]
-> (short) These skills start by asking whether you want `Audit mode` or `YOLO mode`. Audit mode is recommended. YOLO mode still tries to be safe, but acts without asking again. It is still just a prompt, though, so if the AI goes rogue, even if that is unlikely, you are still taking a chance.
 
 ## Star History
 
