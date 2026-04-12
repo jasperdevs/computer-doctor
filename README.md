@@ -18,7 +18,7 @@
 npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
-## Use
+## Slash Commands
 
 ```text
 $computer-doctor
@@ -37,6 +37,9 @@ The skill audits a machine as a working environment, including:
 
 > [!TIP]
 > Use this when you want a full machine check, not just a Windows settings walkthrough or a narrow virus scan.
+
+> [!NOTE]
+> `computer-doctor` is read-first by default and should not make destructive changes unless you explicitly approve them.
 
 ## Installation Prompt
 
