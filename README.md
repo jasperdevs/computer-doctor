@@ -14,21 +14,6 @@ Full-system computer auditing for Codex and compatible agent-skill runtimes.
 npx skills add https://github.com/jasperdevs/computer-doctor
 ```
 
-## Layout
-
-```text
-computer-doctor/
-├── SKILL.md
-├── examples/
-│   └── full-audit-request.md
-├── references/
-│   ├── audit-checklist.md
-│   ├── report-template.md
-│   └── safety-boundaries.md
-├── LICENSE
-└── README.md
-```
-
 ## What It Does
 
 The skill audits a machine as a working environment, including:
