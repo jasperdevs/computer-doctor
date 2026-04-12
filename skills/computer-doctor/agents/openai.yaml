@@ -1,4 +1,4 @@
 interface:
   display_name: "Computer Doctor"
   short_description: "Run a broad machine audit across security, startup, performance, storage, software, updates, and developer tools"
-  default_prompt: "Use $computer-doctor to ask for Audit mode or YOLO mode first, then audit this machine as a working environment and report the highest-impact findings."
+  default_prompt: "Use $computer-doctor to ask for Audit mode or YOLO mode first, then audit this machine across security posture, startup behavior, performance, storage, software quality, updates, and developer tooling, and report the highest-impact findings."

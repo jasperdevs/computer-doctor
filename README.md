@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
   <h1>computer-doctor</h1>
-  <p>A small skill pack for auditing machine health, security posture, update hygiene, and developer-tool setup.</p>
+  <p>A small skill pack for auditing machine health across security, startup, performance, storage, software quality, updates, and developer-tool setup.</p>
 </div>
 
 ## Install
