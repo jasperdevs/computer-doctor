@@ -1,25 +1,19 @@
 <div align="center">
-
-# 🩺 computer-doctor
-
-<img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="250" />
-
-*Skills for auditing computer health, security, updates, and developer tools.*
-
-[![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/stargazers)
-[![Last Commit](https://img.shields.io/github/last-commit/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/commits/main)
-
+  <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
+  <h1>computer-doctor</h1>
+  <p>A small skill pack for auditing machine health, security posture, update hygiene, and developer-tool setup.</p>
+  <p>
+    <a href="https://skills.sh/jasperdevs/computer-doctor">skills.sh</a>
+    ·
+    <a href="./evals/README.md">evals</a>
+    ·
+    <a href="./evals/sample-outputs.md">sample outputs</a>
+    ·
+    <a href="./LICENSE">MIT</a>
+  </p>
 </div>
 
-## 🤖 Installation Prompt
-
-> (GIVE THIS TO AI OPTIONALLY)
-
-```text
-Install skills from https://github.com/jasperdevs/computer-doctor using the `skills` CLI. Install `computer-doctor` for a broad machine audit, or install `security-scan`, `devtools-audit`, or `update-audit` for focused checks.
-```
+`computer-doctor` gives you one broad machine-audit skill and three focused follow-ups. It is designed for inspection-first reviews: gather evidence, separate confirmed issues from suspicion, and recommend next steps without pretending to be a native security product.
 
 ## Install
 
@@ -27,50 +21,47 @@ Install skills from https://github.com/jasperdevs/computer-doctor using the `ski
 npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
-## Slash Commands
+Install `computer-doctor` when you want the broad pass first. If you already know you want the whole pack, use `--all`.
 
-| Command | What it does |
-| --- | --- |
-| `$computer-doctor` | Runs a broad audit across security, startup behavior, performance, storage, software, updates, and developer tooling. |
-| `$security-scan` | Checks antivirus coverage, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. |
-| `$devtools-audit` | Reviews shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts. |
-| `$update-audit` | Reviews updates, outdated tools, drivers, runtimes, package managers, and upgrade opportunities. |
-
-Use `$computer-doctor` for a broad pass.
-Use the focused commands when you already know which area you want to inspect.
-
-## Install Individual Skills
+<details>
+<summary>Install the focused skills or the full pack</summary>
 
 ```bash
-npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 npx skills add https://github.com/jasperdevs/computer-doctor --skill security-scan
 npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --all
 ```
 
-## Modes
+</details>
 
-| Mode | What it does |
+## Commands
+
+| Command | Use it for |
 | --- | --- |
-| `Audit mode` | Inspects first, reports findings, and asks before making changes. Recommended. |
-| `YOLO mode` | Still tries to be safe, but acts without asking again after the initial mode choice. |
+| `$computer-doctor` | A full machine review across security, startup behavior, performance, storage, software quality, updates, and developer tooling. |
+| `$security-scan` | Endpoint protection, firewall status, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. |
+| `$devtools-audit` | PATH problems, shell setup, runtimes, SDKs, package managers, Git tooling, and dead or conflicting installs. |
+| `$update-audit` | OS updates, outdated apps, drivers where visible, runtimes, package managers, and better replacement choices. |
+
+## Example
+
+```text
+$computer-doctor audit this machine for security gaps, startup drag, storage pressure, and broken dev tooling
+```
 
 > [!NOTE]
-> (short) These skills start by asking whether you want `Audit mode` or `YOLO mode`. Audit mode is recommended. YOLO mode still tries to be safe, but acts without asking again. It is still just a prompt, though, so if the AI goes rogue, even if that is unlikely, you are still taking a chance.
+> Each skill begins with `Choose a mode: Audit mode (recommended) or YOLO mode.` Audit mode inspects first and asks before making changes. YOLO mode keeps moving after that initial choice, but still follows the skill's safety boundaries.
 
-## Why Use It
+> [!IMPORTANT]
+> This repository ships prompt skills, not a native scanner. Results depend on the agent's permissions, the available host tools, and the evidence it can collect on the machine.
 
-Use these when you want a clean machine audit without digging through settings, startup apps, storage, and tool setup by hand.
-
-## Validation
+## Verification
 
 ```bash
 node scripts/verify-pack.mjs
 ```
 
-See `evals/README.md` and `evals/sample-outputs.md` for the quality bar and output examples.
+That script checks pack discovery through the `skills` CLI and confirms that each expected skill can be installed on its own.
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=jasperdevs/computer-doctor&type=Date)](https://star-history.com/#jasperdevs/computer-doctor&Date)
+See [evals/README.md](./evals/README.md) for the quality bar and [evals/sample-outputs.md](./evals/sample-outputs.md) for example report shapes.
