@@ -2,7 +2,7 @@
 
 # 🩺 computer-doctor
 
-<img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
+<img src="./assets/computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
 *Skills for computer health checks, security reviews, startup audits, and developer environment audits.*
 
@@ -20,12 +20,12 @@ npx skills add https://github.com/jasperdevs/computer-doctor --list
 
 ## Slash Commands
 
-```text
-$computer-doctor
-$virus-scan
-$startup-audit
-$dev-env-audit
-```
+| Command | What it does |
+| --- | --- |
+| `$computer-doctor` | Runs a broad audit across security, startup behavior, performance, storage, software, and developer tooling. |
+| `$virus-scan` | Checks antivirus coverage, suspicious processes, persistence, autoruns, and obvious malware signals. |
+| `$startup-audit` | Reviews startup items, login items, services, scheduled tasks, launch agents, daemons, and background processes. |
+| `$dev-env-audit` | Reviews the developer environment: shells, PATH, environment variables, runtimes, SDKs, package managers, and Git tooling. |
 
 ## Install
 
@@ -38,7 +38,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill dev-env-aud
 
 ## Why Use It
 
-Use these when you want one pass over the machine instead of checking settings, startup apps, storage, and shell tooling by hand.
+Use these when you want a clean, structured machine audit without checking everything by hand.
 
 - security posture
 - startup and background activity
@@ -47,11 +47,8 @@ Use these when you want one pass over the machine instead of checking settings, 
 - software quality
 - developer tooling health
 
-> [!TIP]
-> Use this when you want a full machine check, not just a Windows settings walkthrough or a narrow virus scan.
-
 > [!NOTE]
-> These skills are read-first by default and should not make destructive changes unless you explicitly approve them.
+> These skills are read-first by default and should not make destructive changes unless you explicitly approve them, however its just a prompt, so if the AI goes rogue even though its unlikely, remember you are taking a chance.
 
 ## Installation Prompt
 
