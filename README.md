@@ -31,12 +31,6 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audi
 | `$devtools-audit` | PATH problems, shell setup, runtimes, SDKs, package managers, Git tooling, and dead or conflicting installs. | [open](https://skills.sh/jasperdevs/computer-doctor/devtools-audit) |
 | `$update-audit` | OS updates, outdated apps, drivers where visible, runtimes, package managers, and better replacement choices. | [open](https://skills.sh/jasperdevs/computer-doctor/update-audit) |
 
-## Example
-
-```text
-$computer-doctor audit this machine for security gaps, startup drag, storage pressure, and broken dev tooling
-```
-
 > [!NOTE]
 > Each skill begins with `Choose a mode: Audit mode (recommended) or YOLO mode.` Audit mode inspects first and asks before making changes. YOLO mode keeps moving after that initial choice, but still follows the skill's safety boundaries.
 
