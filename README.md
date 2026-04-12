@@ -24,10 +24,8 @@ The skill audits a machine as a working environment, including:
 - installed software quality
 - developer tooling and environment health
 
-## Manual Install
+## Installation Prompt
 
-```bash
-git clone https://github.com/jasperdevs/computer-doctor.git
-mkdir -p ~/.codex/skills
-cp -R computer-doctor ~/.codex/skills/
+```text
+Install the `computer-doctor` skill from https://github.com/jasperdevs/computer-doctor using the skills CLI.
 ```
