@@ -17,6 +17,95 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Verify manifest structure and skill paths
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+
+            const fail = (message) => {
+              console.error(message);
+              process.exit(1);
+            };
+
+            const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
+            if (!manifest.name || typeof manifest.name !== "string") {
+              fail("Manifest is missing a valid pack name.");
+            }
+            if (!manifest.default_install || typeof manifest.default_install !== "string") {
+              fail("Manifest is missing a valid default_install command.");
+            }
+            if (!Array.isArray(manifest.skills) || manifest.skills.length === 0) {
+              fail("Manifest must define at least one canonical skill.");
+            }
+
+            const canonicalNames = new Set(manifest.skills.map((skill) => skill.name));
+            const seenNames = new Set();
+
+            const readFrontmatterName = (skillFile) => {
+              const content = fs.readFileSync(skillFile, "utf8");
+              const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+              if (!frontmatter) {
+                fail(`Missing frontmatter in ${skillFile}`);
+              }
+              const nameMatch = frontmatter[1].match(/^name:\s*(.+)$/m);
+              if (!nameMatch) {
+                fail(`Missing frontmatter name in ${skillFile}`);
+              }
+              return nameMatch[1].trim().replace(/^["'']|["'']$/g, "");
+            };
+
+            for (const skill of manifest.skills) {
+              if (!skill.name || !skill.path) {
+                fail(`Canonical skill entry is missing required fields: ${JSON.stringify(skill)}`);
+              }
+              if (seenNames.has(skill.name)) {
+                fail(`Duplicate manifest entry for skill: ${skill.name}`);
+              }
+              seenNames.add(skill.name);
+              const skillPath = path.resolve(skill.path);
+              const skillFile = path.join(skillPath, "SKILL.md");
+              if (!fs.existsSync(skillPath) || !fs.statSync(skillPath).isDirectory()) {
+                fail(`Canonical skill path does not exist: ${skill.path}`);
+              }
+              if (!fs.existsSync(skillFile)) {
+                fail(`Canonical skill is missing SKILL.md: ${skill.path}`);
+              }
+              const frontmatterName = readFrontmatterName(skillFile);
+              if (frontmatterName !== skill.name) {
+                fail(`Manifest name/path mismatch for ${skill.name}; SKILL.md declares ${frontmatterName}`);
+              }
+            }
+
+            for (const alias of manifest.aliases ?? []) {
+              if (!alias.name || !alias.path || !alias.replaced_by) {
+                fail(`Alias entry is missing required fields: ${JSON.stringify(alias)}`);
+              }
+              if (seenNames.has(alias.name)) {
+                fail(`Duplicate manifest entry for alias: ${alias.name}`);
+              }
+              if (!alias.deprecated) {
+                fail(`Alias ${alias.name} must be marked deprecated.`);
+              }
+              if (!canonicalNames.has(alias.replaced_by)) {
+                fail(`Alias ${alias.name} points to missing replacement target: ${alias.replaced_by}`);
+              }
+              seenNames.add(alias.name);
+              const aliasPath = path.resolve(alias.path);
+              const aliasFile = path.join(aliasPath, "SKILL.md");
+              if (!fs.existsSync(aliasPath) || !fs.statSync(aliasPath).isDirectory()) {
+                fail(`Alias path does not exist: ${alias.path}`);
+              }
+              if (!fs.existsSync(aliasFile)) {
+                fail(`Alias is missing SKILL.md: ${alias.path}`);
+              }
+              const frontmatterName = readFrontmatterName(aliasFile);
+              if (frontmatterName !== alias.name) {
+                fail(`Manifest alias/path mismatch for ${alias.name}; SKILL.md declares ${frontmatterName}`);
+              }
+            }
+          '
+
       - name: Verify discovery output matches manifest
         run: |
           OUTPUT="$(npx skills add . --list --full-depth)"
