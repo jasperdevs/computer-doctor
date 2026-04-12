@@ -7,3 +7,4 @@ Use this shape:
 3. confidence level
 4. recommended next steps
 5. whether deeper scanning is needed
+6. approval-required changes in Audit mode

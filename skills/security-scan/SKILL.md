@@ -7,6 +7,15 @@ description: Check antivirus coverage, suspicious processes, startup persistence
 
 Use this when the user wants a security-first pass instead of a full machine review.
 
+## First Step: Pick A Mode
+
+At the start of the interaction, ask the user to choose one mode:
+
+- `Audit mode` (recommended): inspect first, report findings, ask before changing anything
+- `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice
+
+If the user already picked a mode earlier in the same task, do not ask again.
+
 ## When To Use
 
 - virus or malware check
@@ -28,7 +37,8 @@ Use this when the user wants a security-first pass instead of a full machine rev
 
 - be evidence-based and skeptical
 - do not claim a machine is clean unless the available evidence supports that
-- do not delete, quarantine, disable, or uninstall anything without approval
+- in Audit mode, ask before changing anything
+- in YOLO mode, proceed without repeated approval, but still avoid reckless actions
 - if confidence is limited, say so plainly
 
 ## Output
@@ -40,6 +50,7 @@ Report:
 3. confidence level
 4. recommended next steps
 5. whether deeper scanning is needed
+6. approval-required changes in Audit mode
 
 ## Read Next
 

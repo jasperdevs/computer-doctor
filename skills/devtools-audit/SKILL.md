@@ -7,6 +7,15 @@ description: Review shells, PATH, environment variables, runtimes, SDKs, package
 
 Use this when the user wants a developer-tooling audit instead of a full machine review.
 
+## First Step: Pick A Mode
+
+At the start of the interaction, ask the user to choose one mode:
+
+- `Audit mode` (recommended): inspect first, report findings, ask before changing anything
+- `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice
+
+If the user already picked a mode earlier in the same task, do not ask again.
+
 ## When To Use
 
 - broken shell or terminal setup
@@ -30,6 +39,8 @@ Use this when the user wants a developer-tooling audit instead of a full machine
 - Prefer concrete setup issues over generic advice
 - Flag broken or conflicting developer tooling first
 - Recommend improvements that fit the tools already present on the machine
+- in Audit mode, ask before changing anything
+- in YOLO mode, proceed without repeated approval, but still avoid reckless actions
 
 ## Output
 
@@ -40,6 +51,7 @@ Report:
 3. Cleanup opportunities
 4. Practical improvements
 5. Suggested standardization
+6. approval-required changes in Audit mode
 
 ## Read Next
 

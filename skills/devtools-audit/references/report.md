@@ -7,3 +7,4 @@ Use this shape:
 3. cleanup opportunities
 4. practical improvements
 5. suggested standardization
+6. approval-required changes in Audit mode

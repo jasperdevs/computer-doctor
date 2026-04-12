@@ -7,6 +7,15 @@ description: Audit a computer as a working environment across security, performa
 
 Use this when the user wants a broad machine audit.
 
+## First Step: Pick A Mode
+
+At the start of the interaction, ask the user to choose one mode:
+
+- `Audit mode` (recommended): inspect first, report findings, ask before changing anything
+- `YOLO mode`: still try to be safe, but carry out actions without asking again after the initial mode choice
+
+If the user already picked a mode earlier in the same task, do not ask again.
+
 ## What It Covers
 
 This is the top-level command for checking the computer as a whole working environment:
@@ -17,6 +26,7 @@ This is the top-level command for checking the computer as a whole working envir
 - storage pressure
 - software quality
 - developer tooling health
+- update posture and outdated tools
 
 ## When To Use
 
@@ -28,8 +38,8 @@ This is the top-level command for checking the computer as a whole working envir
 ## Rules
 
 - Detect the environment first: OS, shell, permissions, runtime boundaries, and available tools
-- Default to read-only auditing
-- Do not delete, move, overwrite, uninstall, disable, reset, or clean anything unless the user explicitly approves it
+- In Audit mode, default to read-first behavior and ask before changing things
+- In YOLO mode, proceed without repeated approval, but still avoid reckless actions
 - Prefer direct evidence over guesses
 - Clearly separate confirmed issues from suspicion
 
@@ -58,8 +68,8 @@ Report:
 Use the narrower commands when the user wants a focused pass:
 
 - `$security-scan`
-- `$startup-audit`
 - `$devtools-audit`
+- `$update-audit`
 
 ## Read Next
 

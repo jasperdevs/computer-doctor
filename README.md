@@ -20,7 +20,7 @@
 > (GIVE THIS TO AI OPTIONALLY)
 
 ```text
-Install skills from https://github.com/jasperdevs/computer-doctor using the `skills` CLI. Install `computer-doctor` for a broad machine audit, or install `security-scan`, `startup-audit`, or `devtools-audit` for focused checks.
+Install skills from https://github.com/jasperdevs/computer-doctor using the `skills` CLI. Install `computer-doctor` for a broad machine audit, or install `security-scan`, `devtools-audit`, or `update-audit` for focused checks.
 ```
 
 ## Install
@@ -33,18 +33,18 @@ npx skills add https://github.com/jasperdevs/computer-doctor --all
 
 | Command | What it does |
 | --- | --- |
-| `$computer-doctor` | Runs a broad audit across security, startup behavior, performance, storage, software, and developer tooling. |
+| `$computer-doctor` | Runs a broad audit across security, startup behavior, performance, storage, software, updates, and developer tooling. |
 | `$security-scan` | Checks antivirus coverage, suspicious processes, persistence, autoruns, and obvious malware signals. |
-| `$startup-audit` | Reviews startup items, login items, services, scheduled tasks, launch agents, daemons, and background processes. |
 | `$devtools-audit` | Reviews shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and setup conflicts. |
+| `$update-audit` | Reviews updates, outdated tools, drivers, runtimes, package managers, and upgrade opportunities. |
 
 ## Install Individual Skills
 
 ```bash
 npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 npx skills add https://github.com/jasperdevs/computer-doctor --skill security-scan
-npx skills add https://github.com/jasperdevs/computer-doctor --skill startup-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-audit
+npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audit
 ```
 
 ## Why Use It
@@ -52,7 +52,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-au
 Use these when you want a clean machine audit without digging through settings, startup apps, storage, and tool setup by hand.
 
 > [!NOTE]
-> These skills are read-first by default and should not make destructive changes unless you explicitly approve them. It is still just a prompt, though, so if the AI goes rogue, even if that is unlikely, you are still taking a chance.
+> (short) These skills start by asking whether you want `Audit mode` or `YOLO mode`. Audit mode is recommended. YOLO mode still tries to be safe, but acts without asking again. It is still just a prompt, though, so if the AI goes rogue, even if that is unlikely, you are still taking a chance.
 
 ## Star History
 
