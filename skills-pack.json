@@ -1,34 +1,28 @@
 {
   "name": "computer-doctor",
-  "repository": "https://github.com/jasperdevs/computer-doctor",
   "default_install": "npx skills add https://github.com/jasperdevs/computer-doctor --all",
-  "canonical_skills": [
+  "skills": [
     {
       "name": "computer-doctor",
-      "path": "skills/computer-doctor",
-      "skills_sh": "https://skills.sh/jasperdevs/computer-doctor/computer-doctor"
+      "path": "skills/computer-doctor"
     },
     {
       "name": "security-scan",
-      "path": "skills/security-scan",
-      "skills_sh": "https://skills.sh/jasperdevs/computer-doctor/security-scan"
+      "path": "skills/security-scan"
     },
     {
       "name": "devtools-audit",
-      "path": "skills/devtools-audit",
-      "skills_sh": "https://skills.sh/jasperdevs/computer-doctor/devtools-audit"
+      "path": "skills/devtools-audit"
     },
     {
       "name": "update-audit",
-      "path": "skills/update-audit",
-      "skills_sh": "https://skills.sh/jasperdevs/computer-doctor/update-audit"
+      "path": "skills/update-audit"
     }
   ],
   "aliases": [
     {
       "name": "virus-scan",
       "path": "skills/virus-scan",
-      "skills_sh": "https://skills.sh/jasperdevs/computer-doctor/virus-scan",
       "deprecated": true,
       "replaced_by": "security-scan"
     }

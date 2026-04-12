@@ -25,7 +25,7 @@ jobs:
             const fs = require("fs");
             const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
             const names = [
-              ...manifest.canonical_skills.map((skill) => skill.name),
+              ...manifest.skills.map((skill) => skill.name),
               ...(manifest.aliases ?? []).map((skill) => skill.name),
             ];
             const output = process.env.OUTPUT ?? "";
@@ -49,7 +49,7 @@ jobs:
             const path = require("path");
             const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
             const expected = [
-              ...manifest.canonical_skills.map((skill) => skill.name),
+              ...manifest.skills.map((skill) => skill.name),
               ...(manifest.aliases ?? []).map((skill) => skill.name),
             ].sort();
             const installedDir = path.join(process.env.TMP_DIR, ".agents", "skills");
