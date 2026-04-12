@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./computerdoctor.png" alt="computer-doctor graphic" width="140" />
+
 # 🩺 computer-doctor
 
 A skill for full-system computer audits.
