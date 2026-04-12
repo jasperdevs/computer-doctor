@@ -7,6 +7,8 @@ description: Audit a computer as a working environment across security, performa
 
 Use this when the user wants a broad machine audit.
 
+## What It Covers
+
 This is the top-level command for checking the computer as a whole working environment:
 
 - security posture
@@ -15,6 +17,13 @@ This is the top-level command for checking the computer as a whole working envir
 - storage pressure
 - software quality
 - developer tooling health
+
+## When To Use
+
+- full machine check
+- setup review
+- general performance and security review
+- broad audit before cleanup or optimization decisions
 
 ## Rules
 
@@ -30,6 +39,19 @@ This is the top-level command for checking the computer as a whole working envir
 2. Inspect the machine broadly using `references/audit-checklist.md`.
 3. Apply `references/safety-boundaries.md`.
 4. Report findings using `references/report-template.md`.
+
+## Output
+
+Report:
+
+1. executive summary
+2. highest-impact findings
+3. security findings
+4. performance findings
+5. startup and background findings
+6. software and developer environment findings
+7. prioritized action plan
+8. limitations
 
 ## Companion Commands
 

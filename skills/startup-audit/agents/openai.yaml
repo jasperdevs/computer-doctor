@@ -1,0 +1,4 @@
+interface:
+  display_name: "Startup Audit"
+  short_description: "Review startup items, services, scheduled tasks, and background persistence"
+  default_prompt: "Use $startup-audit to review startup items, background persistence, and login-time slowdown without making changes by default."

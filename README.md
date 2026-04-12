@@ -4,11 +4,14 @@
 
 <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="250" />
 
-*Skills for checking computer health, security, startup drag, and developer tools.*
+*Skills for auditing computer health, security, startup behavior, and developer tools.*
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/commits/main)
+
+[Installation Prompt](#-installation-prompt) • [Install](#install) • [Slash Commands](#slash-commands) • [Star History](#star-history)
 
 </div>
 
@@ -49,7 +52,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-au
 Use these when you want a clean machine audit without digging through settings, startup apps, storage, and tool setup by hand.
 
 > [!NOTE]
-> These skills are read-first by default and should not make destructive changes unless you explicitly approve them, however its just a prompt, so if the AI goes rogue even though its unlikely, remember you are taking a chance.
+> These skills are read-first by default and should not make destructive changes unless you explicitly approve them. It is still just a prompt, though, so if the AI goes rogue, even if that is unlikely, you are still taking a chance.
 
 ## Star History
 

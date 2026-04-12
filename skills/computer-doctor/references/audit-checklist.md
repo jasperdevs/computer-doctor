@@ -19,3 +19,11 @@ Cover the broad surface first, then go deeper where evidence justifies it.
 - storage pressure
 - software quality and redundancy
 - developer environment health
+
+## Triage order
+
+1. security risks
+2. stability or slowdown
+3. broken tooling
+4. clutter or redundancy
+5. lower-impact polish
