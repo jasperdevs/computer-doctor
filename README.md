@@ -4,7 +4,7 @@
 
 <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
-*A Codex skill for auditing computer setup, security, performance, and developer tooling.*
+*Skills for computer health checks, security reviews, startup audits, and developer environment audits.*
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
@@ -15,6 +15,7 @@
 ## Install
 
 ```bash
+npx skills add https://github.com/jasperdevs/computer-doctor --list
 npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
@@ -22,11 +23,14 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 
 ```text
 $computer-doctor
+$virus-scan
+$startup-audit
+$dev-env-check
 ```
 
 ## Why Use It
 
-Use it when you want one pass over the whole machine instead of checking settings, startup apps, storage, and shell tooling by hand.
+Use these when you want one pass over the machine instead of checking settings, startup apps, storage, and shell tooling by hand.
 
 - security posture
 - startup and background activity
@@ -39,10 +43,10 @@ Use it when you want one pass over the whole machine instead of checking setting
 > Use this when you want a full machine check, not just a Windows settings walkthrough or a narrow virus scan.
 
 > [!NOTE]
-> `computer-doctor` is read-first by default and should not make destructive changes unless you explicitly approve them.
+> These skills are read-first by default and should not make destructive changes unless you explicitly approve them.
 
 ## Installation Prompt
 
 ```text
-Install the `computer-doctor` skill with `npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor`.
+Install one or more skills from https://github.com/jasperdevs/computer-doctor using the `skills` CLI. First run `npx skills add https://github.com/jasperdevs/computer-doctor --list`, then install the ones you want.
 ```
