@@ -1,100 +1,70 @@
 ---
 name: computer-doctor
 description: Audit a computer as a full working environment across security, performance, configuration, startup behavior, installed software, developer tooling, and system health without making destructive changes by default.
+metadata:
+  short-description: Full-system computer audit
 ---
 
 # Computer Doctor
 
-Perform a full audit of the current computer and software environment.
+Use this skill when the user wants a broad audit of their computer, not just a settings walkthrough.
 
-This skill is for broad machine review, not just OS settings. Inspect the computer as a real working environment: system configuration, internal settings, startup behavior, security posture, performance, storage, installed software, background processes, developer tooling, and quality-of-life improvements.
+This skill inspects the machine as a whole working environment: system configuration, startup behavior, persistent background activity, security posture, performance, storage, installed software, developer tooling, and quality-of-life improvements.
 
-## Core Behavior
+## Use When
 
-- Detect the environment first: operating system, shell, permissions, sandbox or VM or container or WSL status, and available tools.
-- Adapt to the host system instead of assuming Windows, macOS, Linux, admin access, or specific package managers.
-- Default to read-only auditing.
-- Do not delete, move, overwrite, uninstall, disable, reset, or clean anything unless the user explicitly approves it.
-- Prefer direct evidence and repeatable checks over guesses.
-- Tailor recommendations to the observed machine and usage patterns.
-- Be explicit about anything that could not be inspected because of permissions, tooling, or sandbox limits.
+- The user wants a full computer audit
+- The user wants setup, security, performance, and software reviewed together
+- The user wants recommendations based on how the machine appears to be used
+- The user wants suspicious processes, persistence, or malware signals checked without defaulting to destructive cleanup
 
-## What To Audit
+## Do Not Use When
 
-### System configuration
+- The user only wants one specific bug fixed
+- The user only wants a single app configured
+- The user wants broad cleanup or automatic optimization without inspection first
 
-- OS version and update state
-- Important internal settings, not just GUI settings
-- Power, privacy, reliability, and performance-related configuration
+## Core Rules
 
-### Startup and background activity
+- Detect the environment first: OS, shell, permissions, sandbox or VM or container or WSL status, and available tools
+- Adapt to the host instead of assuming Windows, macOS, Linux, admin access, or package managers
+- Default to read-only auditing
+- Do not delete, move, overwrite, uninstall, disable, reset, or clean anything unless the user explicitly approves it
+- Prefer direct evidence and repeatable checks over guesses
+- Focus on high-impact findings rather than minor tweaks
+- Tailor recommendations to the machine's observed usage patterns
+- Clearly separate confirmed issues from suspicion
+- State what could not be inspected because of permissions, tooling, or sandbox limits
 
-- Startup and login items
-- Services, daemons, scheduled tasks, cron jobs, launch agents, launch daemons, or platform equivalents
-- Persistent background processes
-- Heavy or unnecessary background activity
+## Workflow
 
-### Security and safety
+### 1. Detect environment and limits
 
-- Antivirus or endpoint protection status
-- Firewall status
-- Suspicious files, processes, startup entries, persistence mechanisms, or risky permissions
-- Signs of malware, unwanted software, or unsafe configuration
-- Security-relevant update gaps
+- Confirm OS, shell, available tools, permissions, and runtime boundaries
+- Note any missing access that will limit inspection depth
 
-### Performance and stability
+### 2. Inspect the machine by category
 
-- CPU, RAM, disk, GPU, and thermals if available
-- Storage pressure
-- Heavy startup behavior
-- Bloated or crash-prone software
-- Obvious bottlenecks
+Cover the audit areas in `references/audit-checklist.md`.
 
-### Storage hygiene
+Go deeper when signals justify it, especially for:
+- suspicious persistence
+- heavy startup behavior
+- storage pressure
+- broken developer tooling
+- outdated or redundant software
 
-- Low disk headroom
-- Large or bloated directories
-- Caches, logs, temp files, duplicates, and obvious clutter
-- Redundant or overlapping software
+### 3. Apply safety boundaries
 
-### Software ecosystem
+Follow `references/safety-boundaries.md`.
 
-- Installed apps and utilities
-- Outdated, redundant, low-quality, or mismatched software
-- Better alternatives where relevant, including open-source options
+If an action could remove data, break workflows, or is hard to undo, stop and ask first.
 
-### Developer environment
+### 4. Report findings clearly
 
-- Shells and terminals
-- PATH and environment variables
-- Runtimes, SDKs, package managers, Git tooling, and language toolchains
-- Broken, conflicting, or wasteful setup
-
-### Network-related configuration
-
-- DNS, proxy, VPN, adapter, or related software that looks clearly misconfigured, risky, or inefficient
-
-## Safety Rules
-
-- Default to read-only auditing.
-- Never run broad cleanup or destructive commands.
-- Never touch personal files, project folders, SSH keys, browser profiles, databases, cloud-sync folders, or external drives unless specifically approved.
-- If a change could remove data, break workflows, or is difficult to undo, stop and ask first.
-- Prefer reversible fixes and show the exact target of any suggested change.
-
-## Audit Process
-
-1. Detect the environment and constraints.
-2. Inspect broadly, then go deeper where there are real signals.
-3. Verify important findings with multiple checks when possible.
-4. Prioritize high-impact issues over tiny tweaks.
-5. Recommend improvements that fit the actual machine and usage patterns.
-6. Do not make changes automatically unless the user explicitly approves them.
-
-## Output Requirements
+Use the structure in `references/report-template.md`.
 
 For every finding or recommendation, include:
-
 - what was found
 - why it matters
 - evidence
@@ -103,14 +73,9 @@ For every finding or recommendation, include:
 - recommended fix
 - whether it is safe to fix automatically, should require approval, or is informational only
 
-## Output Format
+## Read Next
 
-1. Executive summary
-2. Security findings
-3. Performance findings
-4. System and internal configuration findings
-5. Startup and background findings
-6. Software and app recommendations
-7. Developer environment findings
-8. Prioritized action plan
-9. Limitations
+- `references/audit-checklist.md`
+- `references/safety-boundaries.md`
+- `references/report-template.md`
+- `examples/full-system-audit.md`
