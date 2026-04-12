@@ -2,7 +2,7 @@
 
 # 🩺 computer-doctor
 
-<img src="./assets/computerdoctor-v2.png" alt="computer-doctor graphic" width="250" />
+<img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="250" />
 
 *Skills for checking computer health, security, startup drag, and developer setup.*
 
