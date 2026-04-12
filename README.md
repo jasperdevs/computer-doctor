@@ -2,7 +2,7 @@
 
 <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
-# 🩺 computer-doctor
+# computer-doctor
 
 A skill for full-system computer audits.
 
