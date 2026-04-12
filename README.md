@@ -18,15 +18,25 @@
 npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
-## What It Does
+## Use
+
+```text
+$computer-doctor
+```
+
+## Why Use It
 
 The skill audits a machine as a working environment, including:
 
 - security posture
-- performance and storage pressure
-- startup behavior and persistence
-- installed software quality
-- developer tooling and environment health
+- startup and background activity
+- performance bottlenecks
+- storage pressure
+- software quality
+- developer tooling health
+
+> [!TIP]
+> Use this when you want a full machine check, not just a Windows settings walkthrough or a narrow virus scan.
 
 ## Installation Prompt
 
