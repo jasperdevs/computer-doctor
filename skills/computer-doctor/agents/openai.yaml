@@ -1,4 +1,4 @@
 interface:
   display_name: "Computer Doctor"
-  short_description: "Run a broad machine audit across security, performance, startup, storage, software, and devtools"
+  short_description: "Run a broad machine audit across security, performance, startup, storage, software, and developer tools"
   default_prompt: "Use $computer-doctor to audit this machine as a working environment and report the highest-impact findings without making destructive changes by default."

@@ -4,14 +4,14 @@
 
 <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="250" />
 
-*Skills for auditing computer health, security, startup behavior, and developer tools.*
+*Skills for auditing computer health, security, updates, and developer tools.*
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/commits/main)
 
-[Installation Prompt](#-installation-prompt) • [Install](#install) • [Slash Commands](#slash-commands) • [Star History](#star-history)
+[Installation Prompt](#-installation-prompt) • [Install](#install) • [Slash Commands](#slash-commands) • [Modes](#modes) • [Star History](#star-history)
 
 </div>
 
@@ -35,7 +35,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --all
 | --- | --- |
 | `$computer-doctor` | Runs a broad audit across security, startup behavior, performance, storage, software, updates, and developer tooling. |
 | `$security-scan` | Checks antivirus coverage, suspicious processes, persistence, autoruns, and obvious malware signals. |
-| `$devtools-audit` | Reviews shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and setup conflicts. |
+| `$devtools-audit` | Reviews shells, PATH, environment variables, runtimes, SDKs, package managers, Git tooling, and developer-tool conflicts. |
 | `$update-audit` | Reviews updates, outdated tools, drivers, runtimes, package managers, and upgrade opportunities. |
 
 ## Install Individual Skills
@@ -46,6 +46,13 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill security-sc
 npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audit
 ```
+
+## Modes
+
+| Mode | What it does |
+| --- | --- |
+| `Audit mode` | Inspects first, reports findings, and asks before making changes. Recommended. |
+| `YOLO mode` | Still tries to be safe, but acts without asking again after the initial mode choice. |
 
 ## Why Use It
 
