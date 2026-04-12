@@ -2,32 +2,31 @@
 
 # 🩺 computer-doctor
 
-**Minimal `skills.sh`-style skill repo**
+**Minimal single-skill repo for `skills.sh` and Codex**
 
 Full-system computer auditing for Codex and compatible agent-skill runtimes.
 
 </div>
 
-`skills.sh` commonly expects each skill to be a directory at the repository root containing a `SKILL.md` file. This repo now follows that shape with one skill directory: `computer-doctor/`.
+This repo is now a single skill at the repository root.
 
 ## Install
 
 ```bash
-npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
+npx skills add https://github.com/jasperdevs/computer-doctor
 ```
 
 ## Layout
 
 ```text
 computer-doctor/
-├── computer-doctor/
-│   ├── SKILL.md
-│   ├── examples/
-│   │   └── full-audit-request.md
-│   └── references/
-│       ├── audit-checklist.md
-│       ├── report-template.md
-│       └── safety-boundaries.md
+├── SKILL.md
+├── examples/
+│   └── full-audit-request.md
+├── references/
+│   ├── audit-checklist.md
+│   ├── report-template.md
+│   └── safety-boundaries.md
 ├── LICENSE
 └── README.md
 ```
@@ -53,5 +52,5 @@ The skill audits a machine as a working environment, including:
 ```bash
 git clone https://github.com/jasperdevs/computer-doctor.git
 mkdir -p ~/.codex/skills
-cp -R computer-doctor/computer-doctor ~/.codex/skills/
+cp -R computer-doctor ~/.codex/skills/
 ```
