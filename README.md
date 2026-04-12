@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./computerdoctor.png" alt="computer-doctor graphic" width="220" />
+<img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
 # 🩺 computer-doctor
 
