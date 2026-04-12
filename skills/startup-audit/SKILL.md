@@ -7,7 +7,14 @@ description: Review startup items, login items, services, scheduled tasks, launc
 
 Use this when the user wants a focused review of startup behavior and background persistence.
 
-## Check
+## When To Use
+
+- slow login or boot
+- too many background apps
+- suspicious persistence concerns
+- cleanup of auto-start behavior
+
+## What To Check
 
 - startup or login items
 - services and daemons
@@ -29,3 +36,8 @@ Report:
 2. Persistent background items worth attention
 3. Suspicious persistence if any
 4. Recommended cleanup or follow-up
+
+## Read Next
+
+- `references/checklist.md`
+- `references/report.md`

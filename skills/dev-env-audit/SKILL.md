@@ -7,7 +7,15 @@ description: Review shells, PATH, environment variables, runtimes, SDKs, package
 
 Use this when the user wants a developer-focused audit instead of a full machine review.
 
-## Check
+## When To Use
+
+- broken shell or terminal setup
+- PATH issues
+- runtime or SDK conflicts
+- package-manager sprawl
+- Git or automation-tooling problems
+
+## What To Check
 
 - shells and terminal setup
 - PATH quality
@@ -31,3 +39,8 @@ Report:
 2. Missing essentials
 3. Cleanup opportunities
 4. Practical improvements
+
+## Read Next
+
+- `references/checklist.md`
+- `references/report.md`

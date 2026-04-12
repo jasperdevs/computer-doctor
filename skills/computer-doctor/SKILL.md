@@ -35,7 +35,7 @@ This is the top-level command for checking the computer as a whole working envir
 
 Use the narrower commands when the user wants a focused pass:
 
-- `$virus-scan`
+- `$security-scan`
 - `$startup-audit`
 - `$dev-env-audit`
 
