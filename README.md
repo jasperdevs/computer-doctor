@@ -4,7 +4,7 @@
 
 <img src="./assets/computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
-*Skills for computer health checks, security reviews, startup audits, and developer environment audits.*
+*Skills for checking computer health, malware signals, startup drag, and developer setup.*
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
@@ -16,6 +16,12 @@
 
 ```bash
 npx skills add https://github.com/jasperdevs/computer-doctor --list
+```
+
+## Quick Start
+
+```bash
+npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
 ## Slash Commands
@@ -34,11 +40,12 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 npx skills add https://github.com/jasperdevs/computer-doctor --skill virus-scan
 npx skills add https://github.com/jasperdevs/computer-doctor --skill startup-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill dev-env-audit
+npx skills add https://github.com/jasperdevs/computer-doctor --all
 ```
 
 ## Why Use It
 
-Use these when you want a clean, structured machine audit without checking everything by hand.
+Use these when you want to check a machine fast without manually digging through settings, startup apps, storage, and shell setup.
 
 - security posture
 - startup and background activity
