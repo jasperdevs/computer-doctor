@@ -4,12 +4,6 @@
   <p>A small skill pack for auditing machine health, security posture, update hygiene, and developer-tool setup.</p>
 </div>
 
-| Link | Open |
-| --- | --- |
-| `skills.sh` | [open](https://skills.sh/jasperdevs/computer-doctor) |
-| `GitHub` | [open](https://github.com/jasperdevs/computer-doctor) |
-| `License` | [open](./LICENSE) |
-
 ## Install
 
 ```bash
@@ -30,12 +24,12 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audi
 
 ## Commands
 
-| Command | Use it for |
-| --- | --- |
-| `$computer-doctor` | A full machine review across security, startup behavior, performance, storage, software quality, updates, and developer tooling. |
-| `$security-scan` | Endpoint protection, firewall status, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. |
-| `$devtools-audit` | PATH problems, shell setup, runtimes, SDKs, package managers, Git tooling, and dead or conflicting installs. |
-| `$update-audit` | OS updates, outdated apps, drivers where visible, runtimes, package managers, and better replacement choices. |
+| Command | Use it for | skills.sh |
+| --- | --- | --- |
+| `$computer-doctor` | A full machine review across security, startup behavior, performance, storage, software quality, updates, and developer tooling. | [open](https://skills.sh/jasperdevs/computer-doctor/computer-doctor) |
+| `$security-scan` | Endpoint protection, firewall status, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. | [open](https://skills.sh/jasperdevs/computer-doctor/security-scan) |
+| `$devtools-audit` | PATH problems, shell setup, runtimes, SDKs, package managers, Git tooling, and dead or conflicting installs. | [open](https://skills.sh/jasperdevs/computer-doctor/devtools-audit) |
+| `$update-audit` | OS updates, outdated apps, drivers where visible, runtimes, package managers, and better replacement choices. | [open](https://skills.sh/jasperdevs/computer-doctor/update-audit) |
 
 ## Example
 
