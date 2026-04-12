@@ -2,103 +2,56 @@
 
 # 🩺 computer-doctor
 
-**A Codex skill for full-system computer audits**
+**Minimal `skills.sh`-style skill repo**
 
-Audit a machine like a real working environment: setup, security, startup behavior, background processes, performance, storage, installed software, and developer tooling.
+Full-system computer auditing for Codex and compatible agent-skill runtimes.
 
 </div>
 
-## What It Does
+`skills.sh` commonly expects each skill to be a directory at the repository root containing a `SKILL.md` file. This repo now follows that shape with one skill directory: `computer-doctor/`.
 
-`computer-doctor` is a read-first audit skill. It is built for users who want more than a Windows Settings walkthrough or a narrow virus scan.
+## Install
 
-It helps Codex inspect:
+```bash
+npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
+```
 
-- system and internal configuration
-- startup items and persistent background activity
-- security posture and suspicious signals
-- performance bottlenecks and storage pressure
-- installed software quality and redundancy
-- developer environment health
-- useful app and open-source replacement recommendations
-
-## Design Goals
-
-- broad, practical machine review
-- evidence over guesswork
-- high-impact findings first
-- cross-platform mindset
-- no destructive changes by default
-
-## Repo Structure
+## Layout
 
 ```text
 computer-doctor/
-├── AGENTS.md
-├── CHANGELOG.md
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-├── examples/
-│   ├── full-audit-request.md
-│   └── full-system-audit.md
-├── references/
-│   ├── audit-checklist.md
-│   ├── linux-audit.md
-│   ├── macos-audit.md
-│   ├── report-template.md
-│   ├── safety-boundaries.md
-│   └── windows-audit.md
+├── computer-doctor/
+│   ├── SKILL.md
+│   ├── examples/
+│   │   └── full-audit-request.md
+│   └── references/
+│       ├── audit-checklist.md
+│       ├── report-template.md
+│       └── safety-boundaries.md
 ├── LICENSE
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
-## Installation
+## What It Does
 
-Clone into your Codex skills directory:
+The skill audits a machine as a working environment, including:
+
+- security posture
+- performance and storage pressure
+- startup behavior and persistence
+- installed software quality
+- developer tooling and environment health
+
+## Notes
+
+- It defaults to read-only auditing.
+- It should not delete, uninstall, disable, or clean anything without explicit approval.
+- The `LICENSE` file is not a duplicate of GitHub metadata. GitHub shows license info because it detects that file.
+
+## Manual Install
 
 ```bash
 git clone https://github.com/jasperdevs/computer-doctor.git
+mkdir -p ~/.codex/skills
+cp -R computer-doctor/computer-doctor ~/.codex/skills/
 ```
-
-Or copy the folder into your skills directory manually.
-
-## Usage
-
-Invoke it by name:
-
-```text
-$computer-doctor
-```
-
-Then ask for a broad machine audit, for example:
-
-```text
-$computer-doctor
-
-Perform a full audit of this computer as a working environment. Check setup quality, security, startup behavior, background processes, performance, storage, installed software, and developer tooling. Default to read-only auditing and do not make destructive changes unless explicitly approved.
-```
-
-## Safety Model
-
-This skill is intentionally conservative.
-
-- It defaults to read-only auditing
-- It should not uninstall, disable, reset, clean, or delete anything without explicit approval
-- It should report uncertainty and permission limits instead of bluffing
-
-## Why The Supporting Files Exist
-
-This repo is structured like a reusable skill package, not just a lone prompt file.
-
-- `SKILL.md` keeps the runtime instructions lean
-- `references/` holds detailed guidance without bloating the main skill body
-- `examples/` shows how to invoke the skill cleanly
-- `agents/openai.yaml` makes the skill present better in skill UIs
-- `AGENTS.md` keeps future repo edits aligned with the intended structure
-- `CHANGELOG.md` gives the public repo a simple release trail
-
-## Status
-
-The repo is public and now packaged as a proper standalone skill foundation. The next layer of improvement would be adding platform-specific helper scripts only if repeated real-world use shows they are actually needed.
