@@ -4,7 +4,7 @@
 
 <img src="./computerdoctor-v2.png" alt="computer-doctor graphic" width="220" />
 
-*Audit your computer like a real working environment: security, performance, startup behavior, software quality, and developer tooling.*
+*A Codex skill for auditing computer setup, security, performance, and developer tooling.*
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
@@ -26,7 +26,7 @@ $computer-doctor
 
 ## Why Use It
 
-The skill audits a machine as a working environment, including:
+Use it when you want one pass over the whole machine instead of checking settings, startup apps, storage, and shell tooling by hand.
 
 - security posture
 - startup and background activity
@@ -44,5 +44,5 @@ The skill audits a machine as a working environment, including:
 ## Installation Prompt
 
 ```text
-Install the `computer-doctor` skill from https://github.com/jasperdevs/computer-doctor using the `skills` CLI with `npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor`.
+Install the `computer-doctor` skill with `npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor`.
 ```
