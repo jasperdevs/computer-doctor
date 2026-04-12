@@ -44,4 +44,3 @@ Use the narrower commands when the user wants a focused pass:
 - `references/audit-checklist.md`
 - `references/safety-boundaries.md`
 - `references/report-template.md`
-- `examples/full-audit-request.md`
