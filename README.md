@@ -4,12 +4,16 @@
 
 A skill for full-system computer audits.
 
+[![skills.sh](https://img.shields.io/badge/skills.sh-live-111827)](https://skills.sh/jasperdevs/computer-doctor/computer-doctor)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/stargazers)
+
 </div>
 
 ## Install
 
 ```bash
-npx skills add https://github.com/jasperdevs/computer-doctor
+npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
 ```
 
 ## What It Does
@@ -25,11 +29,5 @@ The skill audits a machine as a working environment, including:
 ## Installation Prompt
 
 ```text
-Install the `computer-doctor` skill from https://github.com/jasperdevs/computer-doctor using the `skills` CLI with `npx skills add https://github.com/jasperdevs/computer-doctor`.
+Install the `computer-doctor` skill from https://github.com/jasperdevs/computer-doctor using the `skills` CLI with `npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor`.
 ```
-
-<div align="center">
-
-[![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=social)](https://github.com/jasperdevs/computer-doctor/stargazers)
-
-</div>
