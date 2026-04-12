@@ -11,8 +11,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/jasperdevs/computer-doctor?style=flat)](https://github.com/jasperdevs/computer-doctor/commits/main)
 
-[Installation Prompt](#-installation-prompt) • [Install](#install) • [Slash Commands](#slash-commands) • [Modes](#modes) • [Star History](#star-history)
-
 </div>
 
 ## 🤖 Installation Prompt
