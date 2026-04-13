@@ -77,32 +77,8 @@ jobs:
               }
             }
 
-            for (const alias of manifest.aliases ?? []) {
-              if (!alias.name || !alias.path || !alias.replaced_by) {
-                fail(`Alias entry is missing required fields: ${JSON.stringify(alias)}`);
-              }
-              if (seenNames.has(alias.name)) {
-                fail(`Duplicate manifest entry for alias: ${alias.name}`);
-              }
-              if (!alias.deprecated) {
-                fail(`Alias ${alias.name} must be marked deprecated.`);
-              }
-              if (!canonicalNames.has(alias.replaced_by)) {
-                fail(`Alias ${alias.name} points to missing replacement target: ${alias.replaced_by}`);
-              }
-              seenNames.add(alias.name);
-              const aliasPath = path.resolve(alias.path);
-              const aliasFile = path.join(aliasPath, "SKILL.md");
-              if (!fs.existsSync(aliasPath) || !fs.statSync(aliasPath).isDirectory()) {
-                fail(`Alias path does not exist: ${alias.path}`);
-              }
-              if (!fs.existsSync(aliasFile)) {
-                fail(`Alias is missing SKILL.md: ${alias.path}`);
-              }
-              const frontmatterName = readFrontmatterName(aliasFile);
-              if (frontmatterName !== alias.name) {
-                fail(`Manifest alias/path mismatch for ${alias.name}; SKILL.md declares ${frontmatterName}`);
-              }
+            if (manifest.aliases && !Array.isArray(manifest.aliases)) {
+              fail("Manifest aliases must be an array when present.");
             }
           '
 
@@ -113,14 +89,19 @@ jobs:
           OUTPUT="$OUTPUT" node -e '
             const fs = require("fs");
             const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
-            const names = [
-              ...manifest.skills.map((skill) => skill.name),
-              ...(manifest.aliases ?? []).map((skill) => skill.name),
-            ];
+            const names = manifest.skills.map((skill) => skill.name);
             const output = process.env.OUTPUT ?? "";
             const missing = names.filter((name) => !output.includes(name));
             if (missing.length) {
               console.error("Missing skills in discovery output:", missing.join(", "));
+              process.exit(1);
+            }
+            const unexpected = (output.match(/^\s*[A-Za-z0-9-]+$/gm) ?? [])
+              .map((line) => line.trim())
+              .filter((line) => line && !["Available Skills", "Use --skill <name> to install specific skills"].includes(line))
+              .filter((line) => !names.includes(line));
+            if (unexpected.length) {
+              console.error("Unexpected skills in discovery output:", unexpected.join(", "));
               process.exit(1);
             }
           '
@@ -137,10 +118,7 @@ jobs:
             const fs = require("fs");
             const path = require("path");
             const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
-            const expected = [
-              ...manifest.skills.map((skill) => skill.name),
-              ...(manifest.aliases ?? []).map((skill) => skill.name),
-            ].sort();
+            const expected = manifest.skills.map((skill) => skill.name).sort();
             const installedDir = path.join(process.env.TMP_DIR, ".agents", "skills");
             const installed = fs.readdirSync(installedDir, { withFileTypes: true })
               .filter((entry) => entry.isDirectory())
@@ -154,12 +132,26 @@ jobs:
             }
           '
 
-      - name: Verify deprecated alias install path still works
-        env:
-          PACK_SOURCE: ${{ github.workspace }}
+      - name: Verify README stays aligned with canonical skills
         run: |
-          TMP_DIR="$(mktemp -d)"
-          pushd "$TMP_DIR" >/dev/null
-          npx skills add "$PACK_SOURCE" -y --agent codex --skill virus-scan --copy
-          popd >/dev/null
-          test -f "$TMP_DIR/.agents/skills/virus-scan/SKILL.md"
+          node -e '
+            const fs = require("fs");
+            const manifest = JSON.parse(fs.readFileSync("skills-pack.json", "utf8"));
+            const readme = fs.readFileSync("README.md", "utf8");
+            for (const skill of manifest.skills) {
+              const installNeedle = `--skill ${skill.name}`;
+              const commandNeedle = `\`$${skill.name}\``;
+              if (!readme.includes(installNeedle)) {
+                console.error(`README is missing install command for ${skill.name}`);
+                process.exit(1);
+              }
+              if (!readme.includes(commandNeedle)) {
+                console.error(`README is missing command table entry for ${skill.name}`);
+                process.exit(1);
+              }
+            }
+            if (readme.includes("virus-scan")) {
+              console.error("README still contains removed skill name: virus-scan");
+              process.exit(1);
+            }
+          '

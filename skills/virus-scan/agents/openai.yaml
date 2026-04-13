@@ -1,4 +1,0 @@
-interface:
-  display_name: "Virus Scan (Deprecated)"
-  short_description: "Deprecated compatibility alias for security-scan"
-  default_prompt: "Use $virus-scan as a deprecated compatibility alias for $security-scan. Ask for Audit mode or YOLO mode first, then perform the same security-first audit as $security-scan, clearly note that $security-scan is the preferred command name, and separate confirmed issues from suspicious patterns with evidence and confidence."
