@@ -37,4 +37,4 @@ The canonical pack surface is tracked in [skills-pack.json](./skills-pack.json).
 > Each skill begins with `Choose a mode: Audit mode (recommended) or YOLO mode.` Audit mode inspects first and asks before making changes. YOLO mode keeps moving after that initial choice, but still follows the skill's safety boundaries.
 
 > [!IMPORTANT]
-> This repository ships prompt skills, not a native scanner. Results depend on the agent's permissions, the available host tools, and the evidence it can collect on the machine.
+> This repository ships prompt skills, not a native scanner. Results depend on the agent's permissions, the available host tools, and the evidence it can collect on the machine, im not responsible if something happens, and reccomend to **ONLY** use this with the latest AI models, NEVER use this with a budget model that will hallucinate, and I am not responsible for anyhting that happens, even tho I have tuned this for safety and have used it myself on my personal computer
