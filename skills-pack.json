@@ -18,5 +18,13 @@
       "name": "update-audit",
       "path": "skills/update-audit"
     }
+  ],
+  "aliases": [
+    {
+      "name": "virus-scan",
+      "path": "skills/virus-scan",
+      "deprecated": true,
+      "replaced_by": "security-scan"
+    }
   ]
 }

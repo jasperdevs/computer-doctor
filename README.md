@@ -18,6 +18,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-do
 npx skills add https://github.com/jasperdevs/computer-doctor --skill security-scan
 npx skills add https://github.com/jasperdevs/computer-doctor --skill devtools-audit
 npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audit
+npx skills add https://github.com/jasperdevs/computer-doctor --skill virus-scan
 ```
 
 </details>
@@ -30,6 +31,7 @@ npx skills add https://github.com/jasperdevs/computer-doctor --skill update-audi
 | `$security-scan` | Endpoint protection, firewall status, suspicious processes, persistence, autoruns, risky permissions, and obvious malware signals. | [open](https://skills.sh/jasperdevs/computer-doctor/security-scan) |
 | `$devtools-audit` | PATH problems, shell setup, runtimes, SDKs, package managers, Git tooling, and dead or conflicting installs. | [open](https://skills.sh/jasperdevs/computer-doctor/devtools-audit) |
 | `$update-audit` | OS updates, outdated apps, drivers where visible, runtimes, package managers, and better replacement choices. | [open](https://skills.sh/jasperdevs/computer-doctor/update-audit) |
+| `$virus-scan` | Legacy alias for `$security-scan`. Prefer `$security-scan`, but this keeps older links and installs understandable. | [open](https://skills.sh/jasperdevs/computer-doctor/virus-scan) |
 
 The canonical pack surface is tracked in [skills-pack.json](./skills-pack.json).
 
