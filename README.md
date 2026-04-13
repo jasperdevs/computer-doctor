@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor
+npx skills add https://github.com/jasperdevs/computer-doctor
 ```
 
 <details>

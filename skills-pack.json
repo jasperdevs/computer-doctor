@@ -1,6 +1,6 @@
 {
   "name": "computer-doctor",
-  "default_install": "npx skills add https://github.com/jasperdevs/computer-doctor --skill computer-doctor",
+  "default_install": "npx skills add https://github.com/jasperdevs/computer-doctor",
   "skills": [
     {
       "name": "computer-doctor",
