@@ -16,5 +16,6 @@ For each finding, include:
 - what was found
 - why it matters
 - evidence
+- severity or priority
 - confidence
 - recommended next step

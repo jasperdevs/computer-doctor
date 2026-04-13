@@ -38,6 +38,7 @@ This deprecated alias should run the same security-first pass as `$security-scan
 - in Audit mode, ask before changing anything
 - in YOLO mode, proceed without repeated approval, but still avoid reckless actions
 - if confidence is limited, say so plainly
+- separate confirmed issues from suspicious patterns that still need deeper inspection
 
 ## Output
 

@@ -44,6 +44,8 @@ If the user already picked a mode earlier in the same task, do not ask again.
 - Recommend improvements that fit the tools already present on the machine
 - in Audit mode, ask before changing anything
 - in YOLO mode, proceed without repeated approval, but still avoid reckless actions
+- Distinguish broken setup from optional cleanup or standardization advice
+- Avoid recommending toolchain migrations unless there is a concrete conflict, dead setup, or maintenance problem
 
 ## Output
 

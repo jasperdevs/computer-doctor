@@ -14,4 +14,5 @@ For each concrete issue, include:
 - what was found
 - evidence
 - impact
+- confidence
 - recommended next step

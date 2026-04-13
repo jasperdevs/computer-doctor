@@ -45,6 +45,8 @@ This is the top-level command for checking the computer as a whole working envir
 - In YOLO mode, proceed without repeated approval, but still avoid reckless actions
 - Prefer direct evidence over guesses
 - Clearly separate confirmed issues from suspicion
+- Prioritize the few highest-impact issues before listing cleanup-grade findings
+- Avoid bloating the report with low-value observations when larger risks or bottlenecks dominate
 
 ## Workflow
 

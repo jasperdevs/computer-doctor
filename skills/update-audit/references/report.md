@@ -13,4 +13,5 @@ For each concrete item, include:
 - what is outdated or weak
 - evidence
 - impact
+- confidence
 - recommended next step

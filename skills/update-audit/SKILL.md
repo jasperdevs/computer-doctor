@@ -44,6 +44,8 @@ If the user already picked a mode earlier in the same task, do not ask again.
 - distinguish “outdated” from “optional upgrade”
 - in Audit mode, ask before changing anything
 - in YOLO mode, proceed without repeated approval, but still avoid reckless actions
+- separate urgent security or stability updates from ordinary freshness improvements
+- only recommend replacements when there is a concrete maintenance, security, or usability reason
 
 ## Output
 

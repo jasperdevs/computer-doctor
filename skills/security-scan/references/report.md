@@ -4,6 +4,7 @@ Use this shape:
 
 1. protection status
 2. highest-risk findings
+   - confirmed or suspicious
    - title
    - evidence
    - confidence

@@ -43,6 +43,8 @@ If the user already picked a mode earlier in the same task, do not ask again.
 - in Audit mode, ask before changing anything
 - in YOLO mode, proceed without repeated approval, but still avoid reckless actions
 - if confidence is limited, say so plainly
+- separate confirmed issues from suspicious patterns that still need deeper inspection
+- avoid recommending destructive remediation unless the evidence is strong enough to justify it
 
 ## Output
 
